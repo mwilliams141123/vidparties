@@ -1,0 +1,150 @@
+body {
+  background: #04BFBF;
+}
+
+.navbar {
+  background: #049DBF;
+  box-shadow: 2px 2px 4px #F2CB07;
+}
+
+a.nav-link {
+  color: #F2CB07;
+}
+
+#video_player_box {
+  width: 100%;
+  height: 700px;
+  background: #000000;
+}
+
+#video {
+  width: 100%;
+  height: 700px;
+}
+
+#video_controls {
+  width: 100%;
+  height: 50px;
+  background: #049DBF;
+  margin-top: -55px;
+  opacity: 0.8;
+}
+
+#video_player_box > #video_controls > #playpausebtn {
+  float: left;
+  color: #F20574;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+#video_player_box > #video_controls > #timestamp {
+  width: 100px;
+  height: 30px;
+  font-size: 14px;
+  float: left;
+  padding-top: 10px;
+  padding-left: 10px;
+}
+
+#video_player_box > #video_controls > #timestamp > #curtimetext {
+  color: #F20574;
+}
+
+#video_player_box > #video_controls > #mutebtn {
+  float: left;
+  color: #F20574;
+  font-size: 20px;
+  padding-left: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+#video_player_box > #video_controls > #volumeslider {
+  width: 100px;
+  margin-top: 18px;
+  float: left;
+  margin-left: 20px;
+}
+
+#video_player_box > #video_controls > #seekslider {
+  width: 100%;
+  float: left;
+}
+
+#video_player_box > #video_controls > #fullscreenbtn {
+  float: right;
+  color: #F20574;
+  font-size: 20px;
+  padding-right: 20px;
+  padding-top: 5px;
+  padding-bottom: 10px;
+  background: none;
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+input[type=range] {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  -moz-appearance: none;
+       appearance: none;
+  /* creating a custom design */
+  width: 100%;
+  cursor: pointer;
+  outline: none;
+}
+
+input[type=range] {
+  /* ... */
+  /*  styling the track  */
+  height: 5px;
+  background: #04BFBF;
+  overflow: hidden;
+  border-radius: 16px;
+}
+
+input[type=range]::-webkit-slider-runnable-track {
+  height: 5px;
+  background: #04BFBF;
+  border-radius: 16px;
+}
+
+/* Track: Mozilla Firefox */
+input[type=range]::-moz-range-track {
+  height: 5px;
+  background: #04BFBF;
+  border-radius: 16px;
+}
+
+input[type=range]::-webkit-slider-thumb {
+  /* removing default appearance */
+  -webkit-appearance: none;
+  appearance: none;
+  /* creating a custom design */
+  height: 5px;
+  width: 5px;
+  background-color: #F20574;
+  border-radius: 50%;
+  border: 2px solid #F20574;
+  box-shadow: -407px 0 0 400px #F20574;
+}
+
+input[type=range]::-moz-range-thumb {
+  height: 5px;
+  width: 5px;
+  background-color: #F20574;
+  border-radius: 50%;
+  border: 1px solid #F20574;
+  box-shadow: -407px 0 0 400px #F20574;
+}/*# sourceMappingURL=main.css.map */
