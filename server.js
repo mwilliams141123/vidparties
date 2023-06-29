@@ -61,14 +61,24 @@ app.use(function(req, res, next) {
 
 // Home Page
 app.get("/", (req, res) => {
-    res.render('index', {
-        title: "Welcome to VidParties",
-        featured: ""
-    });
+    if(req.user) {
+        res.render('index', {
+            title: "Welcome to VidParties",
+            featured: "",
+            logUser: req.user
+        });
+    } else {
+        res.render('index', {
+            title: "Welcome to VidParties",
+            featured: "",
+            logUser: ""
+        });
+    }
 });
 
 // Routes
 app.use('/users', require('./routes/users'));
+app.use('/videos', require('./routes/videos'));
 
 // Start Server
 const PORT = process.env.PORT || 3000;

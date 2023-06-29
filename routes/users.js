@@ -5,11 +5,11 @@ const passport = require('passport');
 const fs = require('fs');
 const path = require('path');
 const multer = require('multer');
-const nodemailer = require('nodemailer');
 const { forwardAuthenticated, ensureAuthenticated } = require('../config/auth');
 
 // Load Models
 const User = require('../models/User');
+const Video = require('../models/Video');
 
 // Log In Page
 router.get('/login', forwardAuthenticated, (req, res) => {
@@ -26,6 +26,13 @@ router.post('/login', (req, res, next) => {
         failureRedirect: '/',
         failureFlash: true
     })(req, res, next);
+});
+
+// Logout Function
+router.get('/logout', (req, res) => {
+    req.logout();
+    req.flash('success_msg', 'You are logged out');
+    res.redirect('/users/login');
 });
 
 // Sign Up Page
@@ -121,11 +128,18 @@ router.post('/signup', (req, res) => {
 
 });
 
-// Dashboard Page
-router.get('/dashboard', ensureAuthenticated, (req, res) => {
-    res.render('dashboard', {
-        title: 'VidParties',
-        logUser: req.user
+// Studio Page
+router.get('/studio', ensureAuthenticated, (req, res) => {
+    Video.find({ author: req.user.username }, (err, videos) => {
+        if(err) {
+            console.log(err);
+        } else {
+            res.render('dashboard', {
+                title: 'VidParties',
+                logUser: req.user,
+                videos: videos
+            });
+        }
     });
 });
 

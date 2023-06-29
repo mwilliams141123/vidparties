@@ -4,12 +4,34 @@
             <img src="/img/logo.png" alt="vidparties" width="200" height="50">
         </a>
         <ul class="navbar-nav ml-auto">
-            <li class="nav-item">
-                <a class="nav-link" href="/users/login">Log In</a>
-            </li>
-            <li class="nav-item">
-                <a class="nav-link" href="/users/signup">Create Account</a>
-            </li>
+            <% if(logUser) { %>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="uploadDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa-solid fa-video"></i>
+                    </a>
+
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="uploadDropdown">
+                        <a class="dropdown-item" href="/users/studio">Studio</a>
+                        <a class="dropdown-item" href="#">Upload Video</a>
+                        <a class="dropdown-item" href="#">Go Live</a>
+                    </div>
+                </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link" href="#" id="privacyDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        <i class="fa-solid fa-gears"></i>
+                    </a>
+                    <div class="dropdown-menu dropdown-menu-right" aria-labelledby="privacyDropdown">
+                        <a class="dropdown-item" href="/users/logout">Logout</a>
+                    </div>
+                </li>
+            <% } else { %>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users/login">Log In</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/users/signup">Create Account</a>
+                </li>
+            <% } %>
         </ul>
     </div>
 </div>

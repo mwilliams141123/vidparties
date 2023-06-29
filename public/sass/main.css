@@ -1,14 +1,15 @@
 body {
-  background: #04BFBF;
+  background: #ECF0F1;
+  overflow-x: hidden;
 }
 
 .navbar {
-  background: #049DBF;
-  box-shadow: 2px 2px 4px #F2CB07;
+  background: #E74C3C;
+  border-bottom: 2px #2980B9 solid;
 }
 
 a.nav-link {
-  color: #F2CB07;
+  color: #2980B9;
 }
 
 #video_player_box {
@@ -25,14 +26,14 @@ a.nav-link {
 #video_controls {
   width: 100%;
   height: 50px;
-  background: #049DBF;
+  background: #E74C3C;
   margin-top: -55px;
   opacity: 0.8;
 }
 
 #video_player_box > #video_controls > #playpausebtn {
   float: left;
-  color: #F20574;
+  color: #2C3E50;
   font-size: 20px;
   padding-left: 20px;
   padding-top: 5px;
@@ -53,12 +54,12 @@ a.nav-link {
 }
 
 #video_player_box > #video_controls > #timestamp > #curtimetext {
-  color: #F20574;
+  color: #2C3E50;
 }
 
 #video_player_box > #video_controls > #mutebtn {
   float: left;
-  color: #F20574;
+  color: #2C3E50;
   font-size: 20px;
   padding-left: 20px;
   padding-top: 5px;
@@ -83,7 +84,7 @@ a.nav-link {
 
 #video_player_box > #video_controls > #fullscreenbtn {
   float: right;
-  color: #F20574;
+  color: #2C3E50;
   font-size: 20px;
   padding-right: 20px;
   padding-top: 5px;
@@ -109,21 +110,21 @@ input[type=range] {
   /* ... */
   /*  styling the track  */
   height: 5px;
-  background: #04BFBF;
+  background: #ECF0F1;
   overflow: hidden;
   border-radius: 16px;
 }
 
 input[type=range]::-webkit-slider-runnable-track {
   height: 5px;
-  background: #04BFBF;
+  background: #ECF0F1;
   border-radius: 16px;
 }
 
 /* Track: Mozilla Firefox */
 input[type=range]::-moz-range-track {
   height: 5px;
-  background: #04BFBF;
+  background: #ECF0F1;
   border-radius: 16px;
 }
 
@@ -134,17 +135,17 @@ input[type=range]::-webkit-slider-thumb {
   /* creating a custom design */
   height: 5px;
   width: 5px;
-  background-color: #F20574;
+  background-color: #2C3E50;
   border-radius: 50%;
-  border: 2px solid #F20574;
-  box-shadow: -407px 0 0 400px #F20574;
+  border: 2px solid #2C3E50;
+  box-shadow: -407px 0 0 400px #2C3E50;
 }
 
 input[type=range]::-moz-range-thumb {
   height: 5px;
   width: 5px;
-  background-color: #F20574;
+  background-color: #2C3E50;
   border-radius: 50%;
-  border: 1px solid #F20574;
-  box-shadow: -407px 0 0 400px #F20574;
+  border: 1px solid #2C3E50;
+  box-shadow: -407px 0 0 400px #2C3E50;
 }/*# sourceMappingURL=main.css.map */
