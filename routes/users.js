@@ -5,11 +5,18 @@ const passport = require('passport');
 const fs = require('fs');
 const path = require('path');
 const multer = require('multer');
+<<<<<<< HEAD
+=======
+const nodemailer = require('nodemailer');
+>>>>>>> b3dd29178d92ba82d65cc483cace506b4525cb7b
 const { forwardAuthenticated, ensureAuthenticated } = require('../config/auth');
 
 // Load Models
 const User = require('../models/User');
+<<<<<<< HEAD
 const Video = require('../models/Video');
+=======
+>>>>>>> b3dd29178d92ba82d65cc483cace506b4525cb7b
 
 // Log In Page
 router.get('/login', forwardAuthenticated, (req, res) => {
@@ -28,6 +35,7 @@ router.post('/login', (req, res, next) => {
     })(req, res, next);
 });
 
+<<<<<<< HEAD
 // Logout Function
 router.get('/logout', (req, res) => {
     req.logout();
@@ -35,6 +43,8 @@ router.get('/logout', (req, res) => {
     res.redirect('/users/login');
 });
 
+=======
+>>>>>>> b3dd29178d92ba82d65cc483cace506b4525cb7b
 // Sign Up Page
 router.get('/signup', forwardAuthenticated, (req, res) => {
     res.render('signup', {
@@ -128,6 +138,7 @@ router.post('/signup', (req, res) => {
 
 });
 
+<<<<<<< HEAD
 // Studio Page
 router.get('/studio', ensureAuthenticated, (req, res) => {
     Video.find({ author: req.user.username }, (err, videos) => {
@@ -140,6 +151,13 @@ router.get('/studio', ensureAuthenticated, (req, res) => {
                 videos: videos
             });
         }
+=======
+// Dashboard Page
+router.get('/dashboard', ensureAuthenticated, (req, res) => {
+    res.render('dashboard', {
+        title: 'VidParties',
+        logUser: req.user
+>>>>>>> b3dd29178d92ba82d65cc483cace506b4525cb7b
     });
 });
 

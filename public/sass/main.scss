@@ -1,20 +1,35 @@
+<<<<<<< HEAD
 $color1: #2C3E50;
 $color2: #E74C3C;
 $color3: #ECF0F1;
 $color4: #3498DB;
 $color5: #2980B9;
+=======
+$color1: #F20574;
+$color2: #049DBF;
+$color3: #04BFBF;
+$color4: #04D99D;
+$color5: #F2CB07;
+>>>>>>> b3dd29178d92ba82d65cc483cace506b4525cb7b
 
 $color-dark: #000000;
 $color-light: #FFFFFF;
 
 body {
     background: $color3;
+<<<<<<< HEAD
     overflow-x: hidden;
+=======
+>>>>>>> b3dd29178d92ba82d65cc483cace506b4525cb7b
 }
 
 .navbar {
     background: $color2;
+<<<<<<< HEAD
     border-bottom: 2px $color5 solid;
+=======
+    box-shadow: 2px 2px 4px $color5;
+>>>>>>> b3dd29178d92ba82d65cc483cace506b4525cb7b
 }
 
 a.nav-link {
